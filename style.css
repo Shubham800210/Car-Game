@@ -9,19 +9,29 @@
 .carName{
     background: #c8d6e5;
 }
-.car, .enemy{
+.car {
     width: 50px;
     height: 80px;
     background: red;
     position: absolute;
     /* top:550px; */
     bottom: 120px;
-    background-image: url(download.jpg);
+    background-image: url(car2.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     
 }
-
+.enemy{
+    width: 50px;
+    height: 80px;
+    background: red;
+    position: absolute;
+    /* top:550px; */
+    bottom: 120px;
+    background-image: url(car2.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
 .gameArea{
     width: 400px;
     height: 100vh;

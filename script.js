@@ -59,6 +59,7 @@ function endGame(){
 
    player.start = false;
    startScreen.classList.remove('hide');
+   startScreen.innerHTML=("Game Over <br>  Your final score is " + player.score + " <br> Press here to restart the Game.")
 
 }
 
@@ -114,7 +115,8 @@ function gamePlay() {
       window.requestAnimationFrame(gamePlay);
       // console.log(player.score++);
       player.score++;
-      score.innerText = "score: "+ player.score;
+      let pscore = player.score -1;
+      score.innerText = "score: "+ pscore;
    }
 
 }
@@ -159,11 +161,18 @@ for(let x = 0; x < 5; x++){
       enemyCar.setAttribute('class', 'enemy');
       enemyCar.y = ((x+1)* 350) * -1;
       enemyCar.style.top = enemyCar.y + "px";
-      enemyCar.style.backgroundColor = 'blue';
+      enemyCar.style.backgroundColor = randomColor();
       enemyCar.style.left = Math.floor(Math.random()*350) + "px";
       gameArea.appendChild(enemyCar);
   }
 
+  function randomColor(){
+   function c(){
+      let hex = Math.floor(Math.random() *256).toString(16);
+      return ("0" + String(hex)).substr(-2);
+   }
+   return "#" + c() + c() + c();
+  }
 
 }
 

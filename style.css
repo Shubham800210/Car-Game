@@ -6,14 +6,19 @@
 .hide{
     display: none;
 }
-
-.car{
+.carName{
+    background: #c8d6e5;
+}
+.car, .enemy{
     width: 50px;
-    height: 70px;
+    height: 80px;
     background: red;
     position: absolute;
     /* top:550px; */
     bottom: 120px;
+    background-image: url(download.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     
 }
 
@@ -24,6 +29,8 @@
     margin: auto;
     position: relative;
     overflow: hidden;
+    border-right: 7px dashed #c8d6e5;
+    border-left: 7px dashed #c8d6e5;
 }
 
 .lines{
@@ -32,4 +39,39 @@
     background: white;
     margin-left:195px;
     position: absolute;
+}
+
+.score{
+    position:absolute;
+    top: 15px;
+    left: 40px;
+    background: goldenrod;
+    width: 300px;
+    line-height: 70px;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: fantasy;
+    box-shadow: 0 5px 5px #777;
+}
+
+.startScreen{
+    position: absolute;
+    background-color: rgb(147, 55, 165);
+    left:50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    z-index: 1;
+    text-align: center;
+    border: 1px solid #ff6b6b;
+    padding: 15px;
+    margin: auto;
+    width:50%;
+    cursor:pointer;
+    letter-spacing: 5;
+    font-size: 20px;
+    word-spacing: 3;
+    line-height: 30px;
+    text-transform: uppercase;
+    box-shadow: 0 5px 5px #777;
 }
